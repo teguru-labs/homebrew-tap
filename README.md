@@ -4,16 +4,13 @@ This repository hosts the Homebrew formulas for [Phelab CLIs](https://github.com
 
 ## Install
 
-`brew install phe-lab/tap/<formula>`
-
-Or `brew tap phe-lab/tap` and then `brew install <formula>`.
-
-Or, in a [`brew bundle`](https://github.com/Homebrew/homebrew-bundle) `Brewfile`:
-
-```ruby
-tap "phe-lab/tap"
-brew "<formula>"
+```bash
+brew tap phe-lab/tap
+brew install <tool>
 ```
+
+Available versions:
+- `ws` (latest version)
 
 ## Documentation
 
