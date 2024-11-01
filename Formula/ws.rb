@@ -5,20 +5,20 @@
 class Ws < Formula
   desc "A simple CLI tool to quickly open VSCode Workspace"
   homepage "https://github.com/phe-lab/ws"
-  version "1.2.0"
+  version "1.3.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/phe-lab/ws/releases/download/v1.2.0/ws_1.2.0_darwin_amd64.tar.gz"
-      sha256 "e73c810fa0ded943c6a77d44e526ef4d679ffddbdfc0bc4e55a6fa998e2effd8"
+      url "https://github.com/phe-lab/ws/releases/download/v1.3.0/ws_1.3.0_darwin_amd64.tar.gz"
+      sha256 "78340fb1d8f0d696e4985f490486429ecb8f6d8d22958f98632aea44f41e910b"
 
       def install
         bin.install "ws"
       end
     end
     on_arm do
-      url "https://github.com/phe-lab/ws/releases/download/v1.2.0/ws_1.2.0_darwin_arm64.tar.gz"
-      sha256 "4a0c3ea13f0392fd1b7fe479049c0073eb1212583e608267e8e412057b71377f"
+      url "https://github.com/phe-lab/ws/releases/download/v1.3.0/ws_1.3.0_darwin_arm64.tar.gz"
+      sha256 "df7fdb5456b73a88b774b795e8e4c4ce28c579b35852e78ab557be2ec6ec8b7a"
 
       def install
         bin.install "ws"
@@ -29,8 +29,8 @@ class Ws < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/phe-lab/ws/releases/download/v1.2.0/ws_1.2.0_linux_amd64.tar.gz"
-        sha256 "d900529e9a83420a341aac8150b2d74a11632c3138b2265095bdaaa67ab1acbb"
+        url "https://github.com/phe-lab/ws/releases/download/v1.3.0/ws_1.3.0_linux_amd64.tar.gz"
+        sha256 "2110433d23f98bc1bdf21e7234880b0a871648e225b1f611a1ee7167b6895ced"
 
         def install
           bin.install "ws"
@@ -39,8 +39,8 @@ class Ws < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/phe-lab/ws/releases/download/v1.2.0/ws_1.2.0_linux_arm64.tar.gz"
-        sha256 "c7c8940ecf86b7f09c3125d8896b85e022422336ec13c8f8c2c3b673ea43780d"
+        url "https://github.com/phe-lab/ws/releases/download/v1.3.0/ws_1.3.0_linux_arm64.tar.gz"
+        sha256 "f1dfca417085d26dc2f7269d41aee16bace0de2b7472bda2a7b1c53e0b22b76f"
 
         def install
           bin.install "ws"
