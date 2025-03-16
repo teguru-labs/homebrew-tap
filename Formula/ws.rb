@@ -5,20 +5,20 @@
 class Ws < Formula
   desc "A simple CLI tool to quickly open VSCode Workspace"
   homepage "https://github.com/teguru-labs/ws"
-  version "1.3.0"
+  version "1.4.0"
 
   on_macos do
-    on_intel do
-      url "https://github.com/teguru-labs/ws/releases/download/v1.3.0/ws_1.3.0_darwin_amd64.tar.gz"
-      sha256 "78340fb1d8f0d696e4985f490486429ecb8f6d8d22958f98632aea44f41e910b"
+    if Hardware::CPU.intel?
+      url "https://github.com/teguru-labs/ws/releases/download/v1.4.0/ws_1.4.0_darwin_amd64.tar.gz"
+      sha256 "9bcc851ac30c469b9c537ff7fae87c0c5b94d851d8a2fe92b5df4f3c1d23d529"
 
       def install
         bin.install "ws"
       end
     end
-    on_arm do
-      url "https://github.com/teguru-labs/ws/releases/download/v1.3.0/ws_1.3.0_darwin_arm64.tar.gz"
-      sha256 "df7fdb5456b73a88b774b795e8e4c4ce28c579b35852e78ab557be2ec6ec8b7a"
+    if Hardware::CPU.arm?
+      url "https://github.com/teguru-labs/ws/releases/download/v1.4.0/ws_1.4.0_darwin_arm64.tar.gz"
+      sha256 "0ff38e16d2bad72b09e5ada1898909f15edbdff79ae277a5386144ff9c7085aa"
 
       def install
         bin.install "ws"
@@ -27,20 +27,20 @@ class Ws < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/teguru-labs/ws/releases/download/v1.3.0/ws_1.3.0_linux_amd64.tar.gz"
-        sha256 "2110433d23f98bc1bdf21e7234880b0a871648e225b1f611a1ee7167b6895ced"
+        url "https://github.com/teguru-labs/ws/releases/download/v1.4.0/ws_1.4.0_linux_amd64.tar.gz"
+        sha256 "ee76c5dab14b9a069bbbb67b5f479388fed4ac2198498c3a7cc11050bdb90bd4"
 
         def install
           bin.install "ws"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/teguru-labs/ws/releases/download/v1.3.0/ws_1.3.0_linux_arm64.tar.gz"
-        sha256 "f1dfca417085d26dc2f7269d41aee16bace0de2b7472bda2a7b1c53e0b22b76f"
+        url "https://github.com/teguru-labs/ws/releases/download/v1.4.0/ws_1.4.0_linux_arm64.tar.gz"
+        sha256 "b92f9f64070ca503777121d1ad6b2984daaaa6256bfc477f4ebfc5eaaff20f61"
 
         def install
           bin.install "ws"
